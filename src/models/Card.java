@@ -3,7 +3,7 @@ package models;
 import java.util.UUID;
 
 public class Card {
-    private UUID id;
+    private final UUID id;
     private String name;
     private String description;
     private User assignedUser;

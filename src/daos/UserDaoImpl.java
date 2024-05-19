@@ -3,9 +3,7 @@ package daos;
 import data.Db;
 import exceptions.UserNotFoundException;
 import models.User;
-import models.User;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 

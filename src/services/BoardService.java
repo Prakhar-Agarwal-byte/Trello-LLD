@@ -36,27 +36,23 @@ public class BoardService {
     public void updateBoardName(UUID boardId, String name) {
         Board board = boardDao.getBoard(boardId);
         board.setName(name);
-        boardDao.updateBoard(board);
     }
 
     public void updateBoardPrivacy(UUID boardId, Privacy privacy) {
         Board board = boardDao.getBoard(boardId);
         board.setPrivacy(privacy);
-        boardDao.updateBoard(board);
     }
 
     public void addMember(UUID boardId, UUID userId) {
         Board board = boardDao.getBoard(boardId);
         User user = userDao.getUser(userId);
         board.getMembers().add(user);
-        boardDao.updateBoard(board);
     }
 
     public void removeMember(UUID boardId, UUID userId) {
         Board board = boardDao.getBoard(boardId);
         User user = userDao.getUser(userId);
         board.getMembers().remove(user);
-        boardDao.updateBoard(board);
     }
 
     public void deleteBoard(UUID boardId) {
